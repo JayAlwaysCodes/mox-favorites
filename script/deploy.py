@@ -1,12 +1,12 @@
-from src import Counter
-from moccasin.boa_tools import VyperContract
+from src import favorites
 
-def deploy() -> VyperContract:
-    counter: VyperContract = Counter.deploy()
-    print("Starting count: ", counter.number())
-    counter.increment()
-    print("Ending count: ", counter.number())
-    return counter
+def deploy():
+    print("Deploying...")
+    favorites_contract = favorites.deploy()
+    starting_number = favorites_contract.retrieve()
+    print(f"Starting number: {starting_number}")
 
-def moccasin_main() -> VyperContract:
-    return deploy()
+
+def moccasin_main():
+    deploy()
+    print("Deployed!")
