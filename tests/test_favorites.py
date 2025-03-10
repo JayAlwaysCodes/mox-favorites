@@ -1,23 +1,19 @@
-from script.deploy import deploy_favorites
 
-def test_starting_values():
-    favorites_contract = deploy_favorites()
+def test_starting_values(favorites_contract):
 
     assert favorites_contract.retrieve() == 42
 
-def test_can_change_value():
+def test_can_change_value(favorites_contract):
     #Arrange
-    favorites_contract = deploy_favorites()
     #Act
     favorites_contract.store(99)
     #Assert
     assert favorites_contract.retrieve() == 99
 
-def test_can_add_person():
+def test_can_add_person(favorites_contract):
     #Arrange
     new_person = "Jay"
     favorite_number = 17
-    favorites_contract = deploy_favorites()
     #Act
     favorites_contract.add_person(new_person, favorite_number)
     #Assert

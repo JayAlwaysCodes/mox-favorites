@@ -186,3 +186,4 @@ pyproject.toml
 .vscode
 .coveragerc
 password.txt
+uv.lock
