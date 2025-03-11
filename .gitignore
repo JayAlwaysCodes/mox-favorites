@@ -187,3 +187,4 @@ pyproject.toml
 .coveragerc
 password.txt
 uv.lock
+foundryup-zksync
