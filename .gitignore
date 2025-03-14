@@ -188,3 +188,4 @@ pyproject.toml
 password.txt
 uv.lock
 foundryup-zksync
+recap.md
